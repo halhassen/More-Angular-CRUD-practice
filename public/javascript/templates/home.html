@@ -1,11 +1,10 @@
 <h1>{{vm.page}}</h1>
 <div ng-repeat="x in vm.Exercise">
-	<div class="well row col-md-2">
-		<h3>{{x.names}}</h3>
+	<h2>{{x.names}}</h3>
 		<h3>{{x.uses}}</h3>
 		<h3>{{x.difficulty}}</h3>
-		<h4>{{$index}}</h4>
-		<button ng-click="vm._delete(x._id)" type="button" class="btn btn-danger">Delete</button>
-		<button ng-click="vm.edit($index)" type="button" class="btn btn-warning">Edit</button>
-	</div>
-</div>
+		<h4>index: {{$index}}</h4>
+		<button ng-click="vm.edit($index)" class="btn btn-warning">Click here to edit</button>
+		<button ng-click="vm.deletes(x._id)" class="btn btn-danger">
+			Delete!</button>
+		</div>

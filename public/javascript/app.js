@@ -14,7 +14,7 @@ app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $ur
 	})
 	.state("Edit", {
 		url: "/Exercise/Edit",
-		templateUrl: "javascript/templates/edit.html",
+		templateUrl: "javascript/templates/createEdit.html",
 		controller: "editController",
 		controllerAs: "vm"
 	})
