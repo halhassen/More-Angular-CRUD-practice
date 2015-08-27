@@ -1,4 +1,4 @@
-var app = angular.module("app", ["ui.router"]); 
+var app = angular.module("app", ["ui.router"]);
 app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
 	$stateProvider.state("Home", {
 		url: "/",
@@ -10,6 +10,12 @@ app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $ur
 		url: "/Exercise/Create",
 		templateUrl: "javascript/templates/createExercise.html",
 		controller: "createController",
+		controllerAs: "vm"
+	})
+	.state("Edit", {
+		url: "/Exercise/Edit",
+		templateUrl: "javascript/templates/edit.html",
+		controller: "editController",
 		controllerAs: "vm"
 	})
 }])

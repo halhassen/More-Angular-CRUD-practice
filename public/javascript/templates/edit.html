@@ -1,0 +1,10 @@
+<h1>{{vm.page}}</h1>
+<h2>{{vm.exercise.names}}</h2>
+<h2>{{vm.exercise.uses}}</h2>
+<h2>{{vm.exercise.difficulty}}</h2>
+<div>
+	<input type="text" ng-model="vm.exercise.names"/>
+	<input type="text" ng-model="vm.exercise.uses"/>
+	<input type="number" ng-model="vm.exercise.difficulty"/>
+	<button ng-click="vm.sendToFactory()" class="btn btn-success">Submit Edit</button>
+</div>

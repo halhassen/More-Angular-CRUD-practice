@@ -1,5 +1,13 @@
 <div class="well">
-	<form>
-		<h1>{{vm.page}}</h1>
+	<form  ng-submit="vm.createExercise()"> <!--Sends the inputs to the homeFactory() -->
+		<input placeholder="Name" type="text" class="form-control" ng-model="vm.exercise.names" required>
+
+		<input placeholder="Uses" type="text"  class="form-control" ng-model="vm.exercise.uses" required>
+
+		<div class="col-md-2">
+			<input placeholder="Difficulty" type="number" class="form-control" ng-model="vm.exercise.difficulty" required>
+
+		</div>
+		<button type="submit" class="btn btn-success" ng-disabled="!vm.exercise.names || !vm.exercise.uses">Click to add exercise</button>
 	</form>
 </div>
